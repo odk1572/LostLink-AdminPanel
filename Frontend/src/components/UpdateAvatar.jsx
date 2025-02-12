@@ -27,7 +27,7 @@ const UpdateAvatar = () => {
     formData.append("avatar", file)
 
     try {
-      const response = await axios.patch("http://localhost:8000/api/v1/auth/avatar", formData, {
+      const response = await axios.patch("https://lostlink-adminpanel.onrender.com/api/v1/auth/avatar", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
