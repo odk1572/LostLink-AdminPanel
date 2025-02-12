@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:8000/api/v1/auth/logout")
+      await axios.post("https://lostlink-adminpanel.onrender.com/api/v1/auth/logout")
       setUser(null)
       setUserAuth(false)
       navigate("/")
