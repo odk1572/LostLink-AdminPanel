@@ -25,7 +25,7 @@ const UpdateAccount = () => {
   const onSubmit = async (data) => {
     setIsLoading(true)
     try {
-      const response = await axios.patch("http://localhost:8000/api/v1/auth/update-account", data)
+      const response = await axios.patch("https://lostlink-adminpanel.onrender.com/api/v1/auth/update-account", data)
       if (response.data.success) {
         setUser(response.data.data)
         toast.success("Account details updated successfully")
