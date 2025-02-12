@@ -15,7 +15,7 @@ const ClaimList = () => {
 
   const fetchClaims = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/v1/claims/admin/claims")
+      const response = await axios.get("https://lostlink-adminpanel.onrender.com/api/v1/claims/admin/claims")
       setClaims(response.data.data)
     } catch (error) {
       toast.error("Failed to fetch claims")
@@ -24,7 +24,7 @@ const ClaimList = () => {
 
   const handleWithdraw = async (claimId) => {
     try {
-      await axios.delete(`http://localhost:8000/api/v1/claims/user/claims/withdraw/${claimId}`)
+      await axios.delete(`https://lostlink-adminpanel.onrender.com/api/v1/claims/user/claims/withdraw/${claimId}`)
       toast.success("Claim withdrawn successfully")
       fetchClaims()
     } catch (error) {
