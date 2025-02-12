@@ -12,7 +12,7 @@ const Logout = () => {
 
   const handleLogout = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/auth/logout")
+      const response = await axios.post("https://lostlink-adminpanel.onrender.com/api/v1/auth/logout")
       if (response.data.success) {
         setUser(null)
         setUserAuth(false)
