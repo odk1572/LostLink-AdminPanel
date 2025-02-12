@@ -17,7 +17,7 @@ const UserProfile = () => {
   useEffect(() => {
     const fetchUserProfile = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/auth/c/${userId}`)
+        const response = await axios.get(`https://lostlink-adminpanel.onrender.com/api/v1/auth/c/${userId}`)
         setProfile(response.data.data)
         setLoading(false)
       } catch (error) {
