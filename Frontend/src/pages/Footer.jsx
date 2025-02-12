@@ -50,7 +50,7 @@ const Footer = () => {
 </span>  for managing users, claims, and uploads.
           </p>
           <p className="text-gray-400 mt-2">
-            Made with <span className="text-red-500">❤️</span> by <span className="text-white font-semibold">ODK</span>
+            Made from scratch with <span className="text-red-500">❤️</span> by <span className="text-white font-semibold">ODK</span>
           </p>
         </div>
       </div>
