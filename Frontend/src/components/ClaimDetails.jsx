@@ -17,7 +17,7 @@ const ClaimDetails = () => {
 
   const fetchClaimDetails = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/claims/admin/claims/${claimId}`)
+      const response = await axios.get(`https://lostlink-adminpanel.onrender.com/api/v1/claims/admin/claims/${claimId}`)
       setClaim(response.data.data)
     } catch (error) {
       toast.error("Failed to fetch claim details")
