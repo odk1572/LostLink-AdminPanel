@@ -13,7 +13,7 @@ const UserManagement = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/v1/auth/all");
+        const response = await axios.get("https://lostlink-adminpanel.onrender.com/api/v1/auth/all");
         setUsers(response.data.users);
         setLoading(false);
       } catch (error) {
@@ -29,7 +29,7 @@ const UserManagement = () => {
   const handleDeleteUser = async (userId) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        await axios.delete(`http://localhost:8000/api/v1/auth/delete/${userId}`);
+        await axios.delete(`https://lostlink-adminpanel.onrender.com/api/v1/auth/delete/${userId}`);
         setUsers(users.filter((user) => user._id !== userId));
         toast.success("User deleted successfully");
       } catch (error) {
