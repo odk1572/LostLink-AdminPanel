@@ -23,7 +23,7 @@ const PClaimDetails = () => {
 
     const fetchClaimDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:8000/api/v1/claims/admin/claims/${claimId}`)
+        const response = await axios.get(`https://lostlink-adminpanel.onrender.com/api/v1/claims/admin/claims/${claimId}`)
         setClaim(response.data.data)
         setLoading(false)
       } catch (error) {
@@ -38,7 +38,7 @@ const PClaimDetails = () => {
 
   const handleUpdateClaimStatus = async (status) => {
     try {
-      await axios.patch(`http://localhost:8000/api/v1/claims/admin/claims/status/${claimId}`, { status })
+      await axios.patch(`https://lostlink-adminpanel.onrender.com/api/v1/claims/admin/claims/status/${claimId}`, { status })
       setClaim({ ...claim, claimStatus: status })
       toast.success(`Claim ${status} successfully`)
     } catch (error) {
@@ -50,7 +50,7 @@ const PClaimDetails = () => {
   const handleDeleteClaim = async () => {
     if (window.confirm("Are you sure you want to delete this claim?")) {
       try {
-        await axios.delete(`http://localhost:8000/api/v1/claims/admin/claims/${claimId}`)
+        await axios.delete(`https://lostlink-adminpanel.onrender.com/api/v1/claims/admin/claims/${claimId}`)
         toast.success("Claim deleted successfully")
         navigate("/admin/claims")
       } catch (error) {
