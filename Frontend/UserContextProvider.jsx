@@ -16,7 +16,7 @@ const UserContextProvider = ({ children }) => {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/v1/auth/current-user");
+      const response = await axios.get("https://lostlink-adminpanel.onrender.com/api/v1/auth/current-user");
 
       if (response.data.success) {
         setUserAuth(true);
