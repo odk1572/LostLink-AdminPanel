@@ -18,7 +18,7 @@ const ChangePassword = () => {
   const onSubmit = async (data) => {
     setIsLoading(true)
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/auth/change-password", data)
+      const response = await axios.post("https://lostlink-adminpanel.onrender.com/api/v1/auth/change-password", data)
       if (response.data.success) {
         toast.success("Password changed successfully")
         reset()
