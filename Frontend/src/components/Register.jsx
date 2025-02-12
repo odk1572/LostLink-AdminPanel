@@ -31,7 +31,7 @@ const Register = () => {
       formData.append("avatar", avatar);
 
       const response = await axios.post(
-        "http://localhost:8000/api/v1/auth/register",
+        "https://lostlink-adminpanel.onrender.com/api/v1/auth/register",
         formData,
         {
           headers: { "Content-Type": "multipart/form-data" },
