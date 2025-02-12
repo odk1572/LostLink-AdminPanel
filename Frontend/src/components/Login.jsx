@@ -21,7 +21,7 @@ const Login = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post("http://localhost:8000/api/v1/auth/login", data);
+      const response = await axios.post("https://lostlink-adminpanel.onrender.com/api/v1/auth/login", data);
   
       if (response.data.success) {
         const user = response.data.data.user;
