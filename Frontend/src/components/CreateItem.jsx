@@ -55,7 +55,7 @@ const CreateItem = () => {
         console.log(`${key}:`, value);
       }
   
-      const response = await axios.post("http://localhost:8000/api/v1/item/create", formData, {
+      const response = await axios.post("https://lostlink-adminpanel.onrender.com/api/v1/item/create", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
