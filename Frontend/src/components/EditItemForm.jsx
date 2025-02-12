@@ -40,7 +40,7 @@ const EditItemForm = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.patch(
-        `http://localhost:8000/api/v1/item/${item?._id}`,
+        `https://lostlink-adminpanel.onrender.com/api/v1/item/${item?._id}`,
         formData,
         {
           headers: {
