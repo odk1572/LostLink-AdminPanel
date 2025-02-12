@@ -13,7 +13,7 @@ const ItemList = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/api/v1/item/")
+        const response = await axios.get("https://lostlink-adminpanel.onrender.com/api/v1/item/")
         setItems(response.data.data)
         setLoading(false)
       } catch (error) {
