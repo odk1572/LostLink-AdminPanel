@@ -32,7 +32,7 @@ const ClaimForm = () => {
     formData.append("proofDocument", proofDocument)
 
     try {
-      const response = await axios.post(`http://localhost:8000/api/v1/claims/${id}`, formData, {
+      const response = await axios.post(`https://lostlink-adminpanel.onrender.com/api/v1/claims/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       })
 
