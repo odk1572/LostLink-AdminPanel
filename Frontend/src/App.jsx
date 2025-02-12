@@ -41,7 +41,7 @@ const App = () => {
 
   const getUserInfo = async () => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/v1/auth/current-user`, {
+      const response = await axios.get(`https://lostlink-adminpanel.onrender.com/api/v1/auth/current-user`, {
         withCredentials: true,
       })
       if (response?.data?.success) {
