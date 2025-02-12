@@ -29,7 +29,7 @@ const ClaimDetails = () => {
   const handleWithdraw = async () => {
     if (window.confirm("Are you sure you want to withdraw this claim?")) {
       try {
-        await axios.delete(`http://localhost:8000/api/v1/claims/user/claims/withdraw/${claimId}`)
+        await axios.delete(`https://lostlink-adminpanel.onrender.com/api/v1/claims/user/claims/withdraw/${claimId}`)
         toast.success("Claim withdrawn successfully")
         // Redirect to claims list or update state
       } catch (error) {
